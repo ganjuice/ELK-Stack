@@ -19,9 +19,10 @@ This document contains the following details:
 The main purpose of this netowrk is to expose a load-balanced and monitored instance of DVWA, the D@mn Vulnerable Web Aplication.
 
 Load balancing ensures that the application will be highly responsive, in addition to restricting traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+What aspect of security do load balancers protect?
+What is the advantage of a jump box?_
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system configuration.
 - _TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
