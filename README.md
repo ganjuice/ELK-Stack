@@ -2,9 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
+https://github.com/ganjuice/ELK-Stack/blob/main/Diagrams/Network%20Diagram.PNG
 
-These files have been tested and used to generate a live ELK deployment an Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the file may be used to install only certain pieces of it, such as Filebeat.
-
+These files have been tested and used to generate a live ELK deployment an Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
 This document contains the following details:
 - Description of the Topology
@@ -20,11 +20,15 @@ The main purpose of this netowrk is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly responsive, in addition to restricting traffic to the network.
 What aspect of security do load balancers protect?
-What is the advantage of a jump box?_
+Load Balancing plays an important sercurity role in cloud computing. The off-loading function of a load balancer devends an organization against distributed denial-of-service (DDoS) attacks.
+What is the advantage of a jump box?
+A jump box is a secure computer that all admins first connect to before launching any administrative task of use as an origination point to connect to other serviers of untrusted environments.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system configuration.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+What does Filebeat watch for?
+Filebeat is a lightwweight shipper for forwarding and centralizing log data. It monitors the log files of locations taht you specify, collects log events, and forwards them either to Elastic search of Logstash for indexing.
+What does Metricbeat record?
+Metricbeat is a lightweight shiper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch of Logstash.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -32,16 +36,17 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Web-1    |          | 10.0.0.5   | Linux            |
-| Web-2    |          | 10.0.0.6   | Linux            |
-| ELK      |          | 10.1.0.4   | Linux            |
+| Web-1    | DVWA     | 10.0.0.5   | Linux            |
+| Web-2    | DVWA     | 10.0.0.6   | Linux            |
+| ELK      | Ansible  | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Add whitelisted IP addresses
+(MY persal IP address)
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
